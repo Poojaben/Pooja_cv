@@ -282,13 +282,15 @@ Write me</div>
         var val1 = document.getElementById("name1").value;
         var val2 = document.getElementById("email1").value;
         var val3 = document.getElementById("text1").value;
-        console.log(val1);
-        console.log(val2);
-        console.log(val3);
-        if(val1&&val2&&val3){
-            alert("Thank you! Message Successfully Submitted");
-            return true;
-        }
+       
+        if (val1 && val2 && val3) {
+                if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val2)) {
+                    alert("message is successfully sent");
+                    return true;
+
+                }
+
+            }
 
       
           
